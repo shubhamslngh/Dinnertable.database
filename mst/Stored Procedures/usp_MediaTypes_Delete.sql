@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_MediaTypes_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[MediaTypes]WHERE [Id] = @Id

@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_CancelReasons_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[CancelReasons]WHERE [Id] = @Id

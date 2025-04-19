@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_BookingStatuses_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[BookingStatuses]WHERE [Id] = @Id

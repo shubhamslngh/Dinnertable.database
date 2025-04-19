@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_BookingStatuses_GetById]	@Id uniqueidentifierASSET NOCOUNT ONSELECT [Id], 	[BookingStatus], 	[IsActive]FROM [mst].[BookingStatuses] WITH(NOLOCK)WHERE [Id] = @Id

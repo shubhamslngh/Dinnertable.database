@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_Tags_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[Tags]WHERE [Id] = @Id

@@ -1,0 +1,1 @@
+﻿CREATE PROC [dbo].[usp_Medias_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [dbo].[Medias]WHERE [Id] = @Id

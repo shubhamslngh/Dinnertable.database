@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_SpecialOccasions_GetById]	@Id uniqueidentifierASSET NOCOUNT ONSELECT [Id], 	[SpecialOccasion], 	[IsActive]FROM [mst].[SpecialOccasions] WITH(NOLOCK)WHERE [Id] = @Id

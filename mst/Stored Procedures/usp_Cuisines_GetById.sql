@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_Cuisines_GetById]	@Id uniqueidentifierASSET NOCOUNT ONSELECT [Id], 	[Cuisine], 	[IsActive]FROM [mst].[Cuisines] WITH(NOLOCK)WHERE [Id] = @Id

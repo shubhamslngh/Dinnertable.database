@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_Features_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[Features]WHERE [Id] = @Id

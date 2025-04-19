@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_Tags_GetAll]ASSET NOCOUNT ONSELECT [Id], 	[Tag], 	[IsActive]FROM Tags

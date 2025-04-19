@@ -1,0 +1,1 @@
+﻿CREATE PROC [dbo].[usp_Medias_GetAll]ASSET NOCOUNT ONSELECT [Id], 	[MediaName], 	[MediaPath], 	[MediaTypeId], 	[ThumbNailMediaId], 	[IsActive], 	[CreatedAt], 	[CreatedBy], 	[DeletedAt], 	[DeletedBy]FROM Medias WITH(NOLOCK)

@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_SpecialOccasions_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[SpecialOccasions]WHERE [Id] = @Id

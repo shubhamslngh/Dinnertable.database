@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_SeatingMoments_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[SeatingMoments]WHERE [Id] = @Id

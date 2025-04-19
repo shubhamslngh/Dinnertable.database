@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_Tags_GetById]	@Id uniqueidentifierASSET NOCOUNT ONSELECT [Id], 	[Tag], 	[IsActive]FROM TagsWHERE [Id] = @Id

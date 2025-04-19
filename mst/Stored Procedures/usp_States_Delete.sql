@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_States_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[States]WHERE [Id] = @Id

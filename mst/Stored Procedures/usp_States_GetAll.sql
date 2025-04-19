@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_States_GetAll]ASSET NOCOUNT ONSELECT [Id], 	[Name], 	[CountryId], 	[IsActive]FROM [mst].[States] WITH(NOLOCK)

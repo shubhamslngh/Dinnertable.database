@@ -1,0 +1,2 @@
+﻿
+CREATE PROC [dbo].[usp_RestaurantFeatures_GetAll]ASSET NOCOUNT ONSELECT [Id], 	[RestaurantId], 	[FeatureId], 	[IsActive], 	[CreatedAt], 	[CreatedBy], 	[DeletedAt], 	[DeletedBy]FROM [dbo].[RestaurantFeatures] WITH(NOLOCK)

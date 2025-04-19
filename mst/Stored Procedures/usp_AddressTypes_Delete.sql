@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_AddressTypes_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[AddressTypes]WHERE [Id] = @Id

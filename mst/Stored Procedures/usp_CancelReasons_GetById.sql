@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_CancelReasons_GetById]	@Id uniqueidentifierASSET NOCOUNT ONSELECT [Id], 	[CancelReason], 	[IsActive]FROM [mst].[CancelReasons] WITH(NOLOCK)WHERE [Id] = @Id

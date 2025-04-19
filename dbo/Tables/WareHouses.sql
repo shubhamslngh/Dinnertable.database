@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[WareHouses] (
+    [Id]            UNIQUEIDENTIFIER CONSTRAINT [DF_WareHouses_Id] DEFAULT (newid()) NOT NULL,
+    [WareHouseName] NVARCHAR (500)   NOT NULL,
+    [OperatorId]    UNIQUEIDENTIFIER NULL,
+    [ContactPerson] NVARCHAR (1000)  NULL,
+    [PhoneNumber]   NVARCHAR (255)   NULL,
+    [Email]         NVARCHAR (255)   NULL,
+    [AddressLine1]  NVARCHAR (500)   NULL,
+    [AddressLine2]  NVARCHAR (500)   NULL,
+    [City]          NVARCHAR (255)   NULL,
+    [StateId]       UNIQUEIDENTIFIER NULL,
+    [Latitude]      DECIMAL (14, 10) NULL,
+    [Longitude]     DECIMAL (14, 10) NULL,
+    [LogoMediaId]   UNIQUEIDENTIFIER NULL,
+    [IsActive]      BIT              CONSTRAINT [DF_WareHouses_IsActive] DEFAULT ((1)) NOT NULL,
+    [CreatedAt]     DATETIME         CONSTRAINT [DF_WareHouses_CreatedAt] DEFAULT (getutcdate()) NOT NULL,
+    [CreatedBy]     NVARCHAR (100)   NOT NULL,
+    [UpdatedAt]     DATETIME         NULL,
+    [UpdatedBy]     NVARCHAR (100)   NULL,
+    [DeletedAt]     DATETIME         NULL,
+    [DeletedBy]     NVARCHAR (100)   NULL,
+    CONSTRAINT [PK_WareHouses] PRIMARY KEY CLUSTERED ([Id] ASC),
+    CONSTRAINT [FK_WareHouses_Operators] FOREIGN KEY ([OperatorId]) REFERENCES [dbo].[Operators] ([Id])
+);
+

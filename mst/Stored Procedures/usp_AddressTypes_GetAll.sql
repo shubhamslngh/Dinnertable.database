@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_AddressTypes_GetAll]ASSET NOCOUNT ONSELECT [Id], 	[AddressType], 	[IsActive]FROM [mst].[AddressTypes] WITH(NOLOCK)

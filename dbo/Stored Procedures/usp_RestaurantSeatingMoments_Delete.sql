@@ -1,0 +1,1 @@
+﻿CREATE PROC [dbo].[usp_RestaurantSeatingMoments_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [dbo].[RestaurantSeatingMoments]WHERE [Id] = @Id

@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_FoodTypes_UpdateIsActive]	@Id uniqueidentifier,  @IsActive BITASSET NOCOUNT ONUPDATE [mst].FoodTypes SET IsActive=@IsActiveWHERE [Id] = @Id

@@ -1,0 +1,1 @@
+﻿CREATE PROC [dbo].[usp_RestaurantTemporaryClosedDates_GetById]	@Id uniqueidentifierASSET NOCOUNT ONSELECT [Id], 	[RestaurantId], 	[FromDate], 	[ToDate], 	[IsActive], 	[CreatedAt], 	[CreatedBy], 	[UpdatedAt], 	[UpdatedBy], 	[DeletedAt], 	[DeletedBy]FROM RestaurantTemporaryClosedDatesWHERE [Id] = @Id

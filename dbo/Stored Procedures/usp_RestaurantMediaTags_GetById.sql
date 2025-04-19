@@ -1,0 +1,2 @@
+﻿
+CREATE PROC [dbo].[usp_RestaurantMediaTags_GetById]	@Id uniqueidentifierASSET NOCOUNT ONSELECT [Id], 	[RestaurantMediaId], 	[TagId], 	[IsActive], 	[CreatedAt], 	[CreatedBy], 	[DeletedAt], 	[DeletedBy]FROM [dbo].[RestaurantMediaTags] WITH(NOLOCK)WHERE [Id] = @Id

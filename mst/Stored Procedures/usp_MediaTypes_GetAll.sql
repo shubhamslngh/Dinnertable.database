@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_MediaTypes_GetAll]ASSET NOCOUNT ONSELECT [Id], 	[MediaType], 	[IsActive]FROM [mst].[MediaTypes] WITH(NOLOCK)

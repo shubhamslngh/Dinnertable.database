@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_Countries_GetById]	@Id uniqueidentifierASSET NOCOUNT ONSELECT [Id], 	[Name], 	[IsActive]FROM [mst].[Countries] WITH(NOLOCK)WHERE [Id] = @Id

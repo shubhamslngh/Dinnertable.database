@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_Currencies_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[Currencies]WHERE [Id] = @Id

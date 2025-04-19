@@ -1,0 +1,1 @@
+﻿CREATE PROC [dbo].[usp_RestaurantOperatingHours_GetAll]ASSET NOCOUNT ONSELECT [Id], 	[RestaurantId], 	[DayOfWeek], 	[OpeningTime], 	[ClosingTime], 	[FromDate], 	[ToDate], 	[IsClosed], 	[IsActive], 	[CreatedAt], 	[CreatedBy], 	[UpdatedAt], 	[UpdatedBy], 	[DeletedAt], 	[DeletedBy]FROM [dbo].[RestaurantOperatingHours] WITH(NOLOCK)

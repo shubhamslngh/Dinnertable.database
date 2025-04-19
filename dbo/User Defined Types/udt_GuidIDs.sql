@@ -1,0 +1,3 @@
+﻿CREATE TYPE [dbo].[udt_GuidIDs] AS TABLE (
+    [ID] UNIQUEIDENTIFIER NOT NULL);
+

@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_FoodTypes_GetAll]ASSET NOCOUNT ONSELECT [Id], 	[FoodType], 	[IsActive]FROM [mst].[FoodTypes] WITH(NOLOCK)

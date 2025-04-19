@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_FoodTypes_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[FoodTypes]WHERE [Id] = @Id

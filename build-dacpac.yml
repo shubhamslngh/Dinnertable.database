@@ -1,0 +1,27 @@
+name: Build DACPAC
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-dacpac:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup MSBuild path
+      uses: microsoft/setup-msbuild@v1
+
+    - name: Build SQL project
+      run: |
+        msbuild DinnerTable.Database/DinnerTable.Database.sqlproj /p:Configuration=Debug /t:Build
+
+    - name: Upload DACPAC artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: DinnerTable.Database.dacpac
+        path: DinnerTable.Database/bin/Debug/*.dacpac

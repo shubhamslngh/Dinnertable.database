@@ -1,0 +1,1 @@
+﻿CREATE PROC [mst].[usp_Countries_Delete]	@Id uniqueidentifierASSET NOCOUNT ONDELETE FROM [mst].[Countries]WHERE [Id] = @Id

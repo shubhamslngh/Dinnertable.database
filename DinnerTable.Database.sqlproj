@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DinnerTable.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{ce2120be-c8e4-4f6b-94f6-8081b4b638c3}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DinnerTable.Database</RootNamespace>
+    <AssemblyName>DinnerTable.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(NetCoreBuild)' != 'true' AND '$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(NetCoreBuild)' != 'true' AND '$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="mst\" />
+    <Folder Include="mst\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="mst\Stored Procedures\" />
+    <Folder Include="dbo\User Defined Types\" />
+    <Folder Include="Security\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\WareHouses.sql" />
+    <Build Include="dbo\Tables\WareHouseRestaurants.sql" />
+    <Build Include="dbo\Tables\WareHouseOperatingHours.sql" />
+    <Build Include="dbo\Tables\Reviews.sql" />
+    <Build Include="dbo\Tables\ReviewMedias.sql" />
+    <Build Include="dbo\Tables\RestaurantTemporaryClosedDates.sql" />
+    <Build Include="dbo\Tables\RestaurantSeatingMoments.sql" />
+    <Build Include="dbo\Tables\Restaurants.sql" />
+    <Build Include="dbo\Tables\RestaurantOperatingHours.sql" />
+    <Build Include="dbo\Tables\RestaurantMediaTags.sql" />
+    <Build Include="dbo\Tables\RestaurantMedias.sql" />
+    <Build Include="dbo\Tables\RestaurantFoodTypes.sql" />
+    <Build Include="dbo\Tables\RestaurantFeatures.sql" />
+    <Build Include="dbo\Tables\RestaurantEmployeeRelations.sql" />
+    <Build Include="dbo\Tables\RestaurantCurrencies.sql" />
+    <Build Include="dbo\Tables\RestaurantCuisines.sql" />
+    <Build Include="dbo\Tables\RestaurantCreditCards.sql" />
+    <Build Include="dbo\Tables\Reservations.sql" />
+    <Build Include="dbo\Tables\ReservationComments.sql" />
+    <Build Include="dbo\Tables\Operators.sql" />
+    <Build Include="dbo\Tables\OperatorMedias.sql" />
+    <Build Include="dbo\Tables\Medias.sql" />
+    <Build Include="dbo\Tables\Invoices.sql" />
+    <Build Include="dbo\Tables\Employees.sql" />
+    <Build Include="dbo\Tables\Customers.sql" />
+    <Build Include="dbo\Tables\CustomerAddress.sql" />
+    <Build Include="dbo\Tables\Brands.sql" />
+    <Build Include="dbo\Tables\BrandOperatorRestaurants.sql" />
+    <Build Include="dbo\Tables\BrandMedias.sql" />
+    <Build Include="dbo\Tables\AspNetUserTokens.sql" />
+    <Build Include="dbo\Tables\AspNetUsers.sql" />
+    <Build Include="dbo\Tables\AspNetUserRoles.sql" />
+    <Build Include="dbo\Tables\AspNetUserLogins.sql" />
+    <Build Include="dbo\Tables\AspNetUserClaims.sql" />
+    <Build Include="dbo\Tables\AspNetRoles.sql" />
+    <Build Include="dbo\Tables\AspNetRoleClaims.sql" />
+    <Build Include="mst\Tables\Countries.sql" />
+    <Build Include="mst\Tables\FoodTypes.sql" />
+    <Build Include="mst\Tables\Cuisines.sql" />
+    <Build Include="mst\Tables\SpecialOccasions.sql" />
+    <Build Include="mst\Tables\Currencies.sql" />
+    <Build Include="mst\Tables\BookingStatuses.sql" />
+    <Build Include="mst\Tables\MediaTypes.sql" />
+    <Build Include="mst\Tables\CancelReasons.sql" />
+    <Build Include="mst\Tables\SeatingMoments.sql" />
+    <Build Include="mst\Tables\Features.sql" />
+    <Build Include="mst\Tables\Tags.sql" />
+    <Build Include="mst\Tables\AddressTypes.sql" />
+    <Build Include="mst\Tables\States.sql" />
+    <Build Include="mst\Tables\CreditCards.sql" />
+    <Build Include="dbo\Functions\fn_Distance_Get.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantTemporaryClosedDates_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantTemporaryClosedDates_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantTemporaryClosedDates_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantTemporaryClosedDates_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantSeatingMoments_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantSeatingMoments_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantSeatingMoments_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantSeatingMoments_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Restaurants_UpdateIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Restaurants_Search.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Restaurants_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Restaurants_GetPopulars.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Restaurants_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Restaurants_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantOperatingHours_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantOperatingHours_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantOperatingHours_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantOperatingHours_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantMediaTags_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantMediaTags_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantMediaTags_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantMediaTags_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantMedias_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantMedias_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantMedias_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantMedias_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantFoodTypes_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantFoodTypes_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantFoodTypes_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantFoodTypes_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantFeatures_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantFeatures_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantFeatures_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantFeatures_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantEmployeeRelations_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantEmployeeRelations_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantEmployeeRelations_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantEmployeeRelations_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCurrencies_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCurrencies_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCurrencies_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCurrencies_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCuisines_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCuisines_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCuisines_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCuisines_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCreditCards_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCreditCards_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCreditCards_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantCreditCards_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_RestaurantAssociatedInfo_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Medias_UpdateIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Medias_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Medias_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Medias_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Medias_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Brands_UpdateIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Brands_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Brands_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Brands_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Brands_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BrandOperatorRestaurants_UpdateIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BrandOperatorRestaurants_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BrandOperatorRestaurants_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BrandOperatorRestaurants_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BrandOperatorRestaurants_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BrandMedias_UpdateIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BrandMedias_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BrandMedias_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BrandMedias_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_BrandMedias_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_Tags_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_Tags_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_Tags_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_Tags_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_States_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_States_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_States_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_States_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_SpecialOccasions_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_SpecialOccasions_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_SpecialOccasions_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_SpecialOccasions_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_SeatingMoments_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_SeatingMoments_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_SeatingMoments_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_SeatingMoments_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_MediaTypes_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_MediaTypes_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_MediaTypes_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_MediaTypes_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_FoodTypes_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_FoodTypes_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_FoodTypes_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_FoodTypes_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_Features_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_Features_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_Features_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_Features_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_Currencies_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_AddressTypes_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_Currencies_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_Currencies_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_CancelReasons_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_Currencies_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_Cuisines_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_Cuisines_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_Cuisines_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_Cuisines_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_CreditCards_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_CreditCards_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_CreditCards_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_CreditCards_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_Countries_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_Features_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_Countries_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_Countries_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_Countries_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_CancelReasons_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_CancelReasons_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_FoodTypes_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_CancelReasons_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_Cuisines_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_CancelReasons_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_BookingStatuses_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_BookingStatuses_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_BookingStatuses_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_BookingStatuses_GetAll.sql" />
+    <Build Include="mst\Stored Procedures\usp_AddressTypes_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_AddressTypes_Save.sql" />
+    <Build Include="mst\Stored Procedures\usp_AddressTypes_GetById.sql" />
+    <Build Include="mst\Stored Procedures\usp_AddressTypes_GetAll.sql" />
+    <Build Include="dbo\User Defined Types\udt_GuidIDs.sql" />
+    <Build Include="dbo\User Defined Types\udt_GuidIDAndDisplayOrder.sql" />
+    <Build Include="Security\mst.sql" />
+    <Build Include="mst\Stored Procedures\usp_Tags_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_States_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_SpecialOccasions_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_SeatingMoments_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_MediaTypes_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_Currencies_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_CreditCards_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_Countries_UpdateIsActive.sql" />
+    <Build Include="mst\Stored Procedures\usp_BookingStatuses_UpdateIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Restaurants_GetByIdLatLong.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reservations_UpdForInvoice.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reservations_Merge.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reservations_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reservations_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reservations_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Operators_UpdateIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Operators_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Operators_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Operators_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Operators_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OperatorMedias_UpdateIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OperatorMedias_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OperatorMedias_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OperatorMedias_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_OperatorMedias_Delete.sql" />
+    <Build Include="mst\Stored Procedures\usp_CreditCards_GetByName.sql" />
+    <Build Include="mst\Stored Procedures\CreditCards_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reviews_UpdateIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reviews_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reviews_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reviews_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reviews_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReviewMedias_UpdateIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReviewMedias_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReviewMedias_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReviewMedias_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReviewMedias_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reservations_UpdForPax.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reservations_UpdateIsActive.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Reservations_Cancel.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ReservationComments_Merge.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Invoices_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Invoices_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Invoices_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Invoices_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Employees_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Employees_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Employees_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Employees_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Customers_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Customers_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Customers_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_Customers_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CustomerAddress_Save.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CustomerAddress_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CustomerAddress_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\usp_CustomerAddress_Delete.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Condition="'$(NetCoreBuild)' == 'true'">
+      <Version>1.0.0</Version>
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" Condition="'$(NetCoreBuild)' == 'true'" />
+  <Target Name="BeforeBuild">
+    <Delete Files="$(BaseIntermediateOutputPath)\project.assets.json" />
+  </Target>
+</Project>
