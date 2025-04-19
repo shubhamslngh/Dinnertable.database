@@ -2,7 +2,7 @@ name: Build DACPAC
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
         msbuild DinnerTable.Database/DinnerTable.Database.sqlproj /p:Configuration=Debug /t:Build
 
     - name: Upload DACPAC artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: DinnerTable.Database.dacpac
         path: DinnerTable.Database/bin/Debug/*.dacpac
