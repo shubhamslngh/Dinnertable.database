@@ -17,10 +17,7 @@ jobs:
 
     - name: Setup MSBuild path
       uses: microsoft/setup-msbuild@v1
-     
-    - name: List files for debugging
-      run: |
-        dir /s /b
+ 
         
     - name: Build SQL project
       run: |
