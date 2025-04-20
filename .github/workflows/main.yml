@@ -13,13 +13,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
     
-    - name: List files for debugging
-      run: |
-        dir /s /b
+   
 
     - name: Setup MSBuild path
       uses: microsoft/setup-msbuild@v1
-
+     
+    - name: List files for debugging
+      run: |
+        dir /s /b
+        
     - name: Build SQL project
       run: |
        msbuild DinnerTable.Database.sqlproj /p:Configuration=Debug /t:Build
