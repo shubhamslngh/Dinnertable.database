@@ -18,7 +18,7 @@ jobs:
 
     - name: Build SQL project
       run: |
-        msbuild DinnerTable.Database/DinnerTable.Database.sqlproj /p:Configuration=Debug /t:Build
+       msbuild DinnerTable.Database.sqlproj /p:Configuration=Debug /t:Build
 
     - name: Upload DACPAC artifact
       uses: actions/upload-artifact@v4
