@@ -70,10 +70,12 @@
   <Build Include="Schemas\mst.sql">
     <SubType>Schema</SubType>
   </Build>
-  <Build Include="dbo\Stored_Procedures\**\*.sql" />
-  <Build Include="mst\Stored_Procedures\**\*.sql" />
-  <Build Include="dbo\Tables\**\*.sql" />
-  <Build Include="mst\Tables\**\*.sql" />
+   <Build Include="dbo\Functions\**\*.sql" />
+    <Build Include="dbo\User_Defined_Types\**\*.sql" />
+    <Build Include="dbo\Tables\**\*.sql" />
+    <Build Include="dbo\Stored_Procedures\**\*.sql" />
+    <Build Include="mst\Tables\**\*.sql" />
+    <Build Include="mst\Stored_Procedures\**\*.sql" />
 </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Condition="'$(NetCoreBuild)' == 'true'">
