@@ -18,9 +18,8 @@ jobs:
     - name: Build SQL project
       run: msbuild DinnerTable.Database.sqlproj /p:Configuration=Debug /t:Build
 
-    - name: Debug: list out artifacts
-      run: |
-          cmd /C "dir /s /b .\bin\Debug\*.dacpac"
+    - name: List DACPAC files
+      run: cmd /C "dir /s /b .\bin\Debug\*.dacpac"
           # or, in PowerShell:
           # Get-ChildItem -Path .\bin\Debug -Recurse -Filter *.dacpac | ForEach-Object Name
 
@@ -28,4 +27,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: DinnerTable.Database.dacpac
-        path: /*.dacpac
+        path: bin/Debug/*.dacpac
