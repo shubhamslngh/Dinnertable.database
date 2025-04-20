@@ -18,11 +18,11 @@ jobs:
     - name: Build SQL project
       run: msbuild DinnerTable.Database.sqlproj /p:Configuration=Debug /t:Build
 
-    - name: Debug: list out artifacts
+    - name: Debug:list out artifacts
       run: dir /s /b .\bin\Debug\
 
     - name: Upload DACPAC artifact
       uses: actions/upload-artifact@v4
       with:
         name: DinnerTable.Database.dacpac
-        path: ./
+        path: bin/Debug/*.dacpac
